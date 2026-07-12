@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# EmployeeManagementSystem
-=======
 # Employee Management System
 
 A Java-based Employee Management System developed using **Java, JDBC, MySQL, HTML, CSS, and JavaScript**. The application allows users to manage employee records with CRUD operations and various employee management features.
