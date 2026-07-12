@@ -14,7 +14,7 @@ public class DBConnection {
             return DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/employee_db",
                     "root",
-                    "system"
+                    "***"
             );
 
         } catch (Exception e) {
