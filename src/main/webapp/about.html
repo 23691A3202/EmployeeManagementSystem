@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Employee Management System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="page-loader"><div class="loader-logo">🏢</div></div>
+<div id="toast-container"></div>
+
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <div class="brand-icon">🏢</div>
+    <div class="brand-text"><span>EMS</span>
+    <span>Employee Management System</span></div>
+  </div>
+  <ul class="sidebar-nav">
+    <li class="nav-section">Main</li>
+    <li><a href="index.html"><i class="fa-solid fa-house"></i><span>Dashboard</span></a></li>
+    <li class="nav-section">Employees</li>
+    <li><a href="addEmployee.html"><i class="fa-solid fa-user-plus"></i><span>Add Employee</span></a></li>
+    <li><a href="employeeList.html"><i class="fa-solid fa-users"></i><span>View Employees</span></a></li>
+    <li><a href="updateEmployee.html"><i class="fa-solid fa-user-pen"></i><span>Update Employee</span></a></li>
+    <li><a href="deleteEmployee.html"><i class="fa-solid fa-user-minus"></i><span>Delete Employee</span></a></li>
+    <li><a href="searchEmployee.html"><i class="fa-solid fa-magnifying-glass"></i><span>Search Employee</span></a></li>
+    <li class="nav-section">Info</li>
+    <li><a href="about.html" class="active"><i class="fa-solid fa-circle-info"></i><span>About</span></a></li>
+  </ul>
+  <div class="sidebar-footer">
+    <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a>
+  </div>
+</aside>
+
+<main class="main">
+  <div class="topbar">
+    <div class="topbar-left">
+      <h1>About</h1>
+      <p>Project information and tech stack</p>
+    </div>
+    <div class="topbar-right">
+      <button class="theme-toggle" onclick="toggleTheme()">
+        <i id="theme-icon" class="fa-solid fa-moon"></i>
+        <div class="toggle-switch"></div>
+        <span id="theme-label">Dark Mode</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div style="background:linear-gradient(135deg,var(--primary),var(--secondary));border-radius:var(--radius);padding:40px;color:#fff;margin-bottom:24px;text-align:center;position:relative;overflow:hidden">
+    <div style="font-size:56px;margin-bottom:12px">🏢</div>
+    <h2 style="font-size:26px;font-weight:800;margin-bottom:8px">Employee Management System</h2>
+    <p style="opacity:.85;font-size:15px">A full-stack Java web application for managing employee records</p>
+    <div style="margin-top:16px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+      <span style="background:rgba(255,255,255,.2);padding:6px 14px;border-radius:99px;font-size:13px;font-weight:600">v2.0</span>
+      <span style="background:rgba(255,255,255,.2);padding:6px 14px;border-radius:99px;font-size:13px;font-weight:600">Java EE</span>
+      <span style="background:rgba(255,255,255,.2);padding:6px 14px;border-radius:99px;font-size:13px;font-weight:600">MySQL</span>
+    </div>
+  </div>
+
+  <!-- Tech Stack -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:24px">
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center;box-shadow:var(--shadow)">
+      <div style="font-size:32px;margin-bottom:8px">☕</div>
+      <div style="font-weight:700;font-size:15px">Java Servlets</div>
+      <div style="font-size:12px;color:var(--text-muted);margin-top:4px">Backend Logic</div>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center;box-shadow:var(--shadow)">
+      <div style="font-size:32px;margin-bottom:8px">🗄️</div>
+      <div style="font-weight:700;font-size:15px">MySQL + JDBC</div>
+      <div style="font-size:12px;color:var(--text-muted);margin-top:4px">Database Layer</div>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center;box-shadow:var(--shadow)">
+      <div style="font-size:32px;margin-bottom:8px">🎨</div>
+      <div style="font-weight:700;font-size:15px">HTML5 / CSS3 / JS</div>
+      <div style="font-size:12px;color:var(--text-muted);margin-top:4px">Frontend</div>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center;box-shadow:var(--shadow)">
+      <div style="font-size:32px;margin-bottom:8px">📦</div>
+      <div style="font-weight:700;font-size:15px">Maven</div>
+      <div style="font-size:12px;color:var(--text-muted);margin-top:4px">Build Tool</div>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center;box-shadow:var(--shadow)">
+      <div style="font-size:32px;margin-bottom:8px">🐱</div>
+      <div style="font-weight:700;font-size:15px">Apache Tomcat</div>
+      <div style="font-size:12px;color:var(--text-muted);margin-top:4px">Web Server</div>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center;box-shadow:var(--shadow)">
+      <div style="font-size:32px;margin-bottom:8px">📊</div>
+      <div style="font-weight:700;font-size:15px">Chart.js</div>
+      <div style="font-size:12px;color:var(--text-muted);margin-top:4px">Data Visualization</div>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)">
+    <h3 style="font-size:17px;font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:8px">
+      <i class="fa-solid fa-list-check" style="color:var(--primary)"></i> Features
+    </h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px">
+      <div style="display:flex;align-items:center;gap:10px;font-size:14px">
+        <i class="fa-solid fa-circle-check" style="color:var(--success)"></i> Add / Update / Delete Employees
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:14px">
+        <i class="fa-solid fa-circle-check" style="color:var(--success)"></i> Live Search by ID or Name
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:14px">
+        <i class="fa-solid fa-circle-check" style="color:var(--success)"></i> Dashboard Statistics
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:14px">
+        <i class="fa-solid fa-circle-check" style="color:var(--success)"></i> Department &amp; Salary Charts
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:14px">
+        <i class="fa-solid fa-circle-check" style="color:var(--success)"></i> Export to CSV / PDF / Print
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:14px">
+        <i class="fa-solid fa-circle-check" style="color:var(--success)"></i> Dark Mode with LocalStorage
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:14px">
+        <i class="fa-solid fa-circle-check" style="color:var(--success)"></i> Sortable &amp; Paginated Table
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:14px">
+        <i class="fa-solid fa-circle-check" style="color:var(--success)"></i> Fully Responsive Design
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;padding:24px 0;color:var(--text-muted);font-size:13px">
+    Employee Management System &copy; 2025 &mdash; Built with Java Servlets &amp; JDBC
+  </div>
+</main>
+
+<script src="js/app.js"></script>
+<script src="js/theme.js"></script>
+</body>
+</html>

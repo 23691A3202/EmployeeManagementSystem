@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <servlet>
+        <servlet-name>AddEmployeeServlet</servlet-name>
+        <servlet-class>backend.AddEmployeeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddEmployeeServlet</servlet-name>
+        <url-pattern>/addEmployee</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetEmployeesServlet</servlet-name>
+        <servlet-class>backend.GetEmployeesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetEmployeesServlet</servlet-name>
+        <url-pattern>/getEmployees</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateEmployeeServlet</servlet-name>
+        <servlet-class>backend.UpdateEmployeeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateEmployeeServlet</servlet-name>
+        <url-pattern>/updateEmployee</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteEmployeeServlet</servlet-name>
+        <servlet-class>backend.DeleteEmployeeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteEmployeeServlet</servlet-name>
+        <url-pattern>/deleteEmployee</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SearchEmployeeServlet</servlet-name>
+        <servlet-class>backend.SearchEmployeeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchEmployeeServlet</servlet-name>
+        <url-pattern>/searchEmployee</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>StatsServlet</servlet-name>
+        <servlet-class>backend.StatsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StatsServlet</servlet-name>
+        <url-pattern>/stats</url-pattern>
+    </servlet-mapping>
+
+</web-app>
