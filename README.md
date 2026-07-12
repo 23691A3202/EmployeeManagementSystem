@@ -1,38 +1,40 @@
 # Employee Management System
 
-A Java-based Employee Management System developed using **Java, JDBC, MySQL, HTML, CSS, and JavaScript**. The application allows users to manage employee records with CRUD operations and various employee management features.
+A full-stack Employee Management System developed using **Java, Servlets, JDBC, MySQL, Apache Tomcat, Maven, HTML, CSS, and JavaScript**. The application enables efficient employee record management through a responsive web interface with database integration and dashboard analytics.
 
 ---
 
 ## Features
 
-### Authentication
-- User Login System
-- Validates username and password before accessing the system
-
 ### Employee Management
 - Add Employee
-- View All Employees
-- Update Employee Salary
-- Delete Employee by ID
+- View Employee Records
+- Update Employee Details
+- Delete Employee Records
 - Search Employee by ID
-- Search Employees by Department
+- Search Employee by Department
 
-### Reports & Analytics
-- Count Total Employees
-- Find Highest Salary Employee
-- Find Lowest Salary Employee
-- Calculate Average Salary
-- Sort Employees by Salary
+### Dashboard & Analytics
+- Total Employees
+- Total Departments
+- Highest Salary
+- Lowest Salary
+- Average Salary
+- Employee Statistics Dashboard
 
-### Frontend
-- Dashboard Home Page
-- Add Employee Page
-- Employee List Page
-- Search Employee Page
-- Update Employee Page
-- Delete Employee Page
-- Employee Statistics Page
+### User Interface
+- Responsive Dashboard
+- Professional Sidebar Navigation
+- Employee Management Forms
+- Search Functionality
+- Statistics Cards
+- Modern UI Design
+
+### Database Integration
+- MySQL Database Connectivity
+- Real-Time Data Storage
+- JDBC-Based CRUD Operations
+- Persistent Employee Records
 
 ---
 
@@ -40,8 +42,8 @@ A Java-based Employee Management System developed using **Java, JDBC, MySQL, HTM
 
 ### Backend
 - Java
+- Java Servlets
 - JDBC
-- MySQL
 
 ### Frontend
 - HTML5
@@ -51,10 +53,19 @@ A Java-based Employee Management System developed using **Java, JDBC, MySQL, HTM
 ### Database
 - MySQL
 
-### Tools
+### Server
+- Apache Tomcat 9
+
+### Build Tool
+- Maven
+
+### Version Control
+- Git
+- GitHub
+
+### IDE
+- IntelliJ IDEA
 - VS Code
-- Git & GitHub
-- MySQL Connector/J
 
 ---
 
@@ -63,112 +74,163 @@ A Java-based Employee Management System developed using **Java, JDBC, MySQL, HTM
 ```text
 EmployeeManagementSystem
 │
-├── backend
-│   ├── DBConnection.java
-│   ├── Employee.java
-│   ├── EmployeeDAO.java
-│   ├── UserDAO.java
-│   └── Main.java
+├── src
+│   └── main
+│       ├── java
+│       │   └── backend
+│       │       ├── DBConnection.java
+│       │       ├── Employee.java
+│       │       ├── EmployeeDAO.java
+│       │       ├── UserDAO.java
+│       │       └── Main.java
+│       │
+│       └── webapp
+│           ├── index.html
+│           ├── addEmployee.html
+│           ├── employeeList.html
+│           ├── searchEmployee.html
+│           ├── updateEmployee.html
+│           ├── deleteEmployee.html
+│           ├── employeeStats.html
+│           ├── style.css
+│           ├── script.js
+│           └── WEB-INF
+│               └── web.xml
 │
-├── frontend
-│   ├── index.html
-│   ├── addEmployee.html
-│   ├── employeeList.html
-│   ├── searchEmployee.html
-│   ├── updateEmployee.html
-│   ├── deleteEmployee.html
-│   ├── employeeStats.html
-│   ├── style.css
-│   └── script.js
-│
-└── lib
-    └── mysql-connector-j-9.7.0.jar
+├── pom.xml
+├── README.md
+└── target
 ```
 
 ---
 
-## Database Configuration
+## Database Setup
 
-Create a database:
+### Create Database
 
 ```sql
 CREATE DATABASE employee_db;
 USE employee_db;
 ```
 
-Create employees table:
+### Create Employees Table
 
 ```sql
 CREATE TABLE employees (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT PRIMARY KEY,
     name VARCHAR(100),
     department VARCHAR(100),
     salary DOUBLE
 );
 ```
 
-Create users table:
-
-```sql
-CREATE TABLE users (
-    username VARCHAR(50),
-    password VARCHAR(50)
-);
-```
-
-Insert login credentials:
-
-```sql
-INSERT INTO users VALUES ('admin', 'admin123');
-```
-
 ---
 
 ## How to Run
 
-### Clone Repository
+### 1. Clone Repository
 
 ```bash
 git clone https://github.com/23691A3202/EmployeeManagementSystem.git
 ```
 
-### Open Project
+### 2. Open Project
 
-Open the project in VS Code.
+Open the project in IntelliJ IDEA or VS Code.
 
-### Configure Database
+### 3. Configure Database
 
-Update database credentials in:
+Update your database credentials in:
 
 ```java
 DBConnection.java
 ```
 
-```java
-String url = "jdbc:mysql://localhost:3306/employee_db";
-String username = "root";
-String password = "system";
+### 4. Build Project
+
+```bash
+mvn clean package
 ```
 
-### Run Application
+### 5. Deploy WAR File
 
-Execute:
+After a successful build:
 
-```java
-Main.java
+```text
+target/EmployeeManagementSystem.war
+```
+
+Copy the WAR file to:
+
+```text
+apache-tomcat-9/webapps/
+```
+
+### 6. Start Apache Tomcat
+
+```bash
+startup.bat
+```
+
+### 7. Open Application
+
+```text
+http://localhost:8080/EmployeeManagementSystem
 ```
 
 ---
 
-## Future Enhancements
+## Key Functionalities
 
-- Spring Boot Integration
-- REST APIs
-- Employee Profile Management
-- Department Management
-- Web-Based Dashboard
-- Role-Based Authentication
-- Cloud Deployment
+### Add Employee
+- Insert employee details into MySQL database
+
+### View Employees
+- Display all employee records
+
+### Update Employee
+- Modify employee information
+
+### Delete Employee
+- Remove employee records safely
+
+### Search Employee
+- Search by Employee ID
+- Search by Department
+
+### Dashboard Statistics
+- Total Employees
+- Highest Salary
+- Lowest Salary
+- Average Salary
+
+---
+
+## Maven Integration
+
+This project uses Maven for:
+
+- Dependency Management
+- Build Automation
+- WAR File Generation
+- Tomcat Deployment Support
+
+Build Command:
+
+```bash
+mvn clean package
+```
+
+---
+
+## Apache Tomcat Integration
+
+The application is deployed on Apache Tomcat 9 and supports:
+
+- WAR Deployment
+- Servlet Execution
+- Dynamic Web Pages
+- Database Connectivity
 
 ---
 
@@ -177,12 +239,26 @@ Main.java
 This project demonstrates:
 
 - Core Java Programming
+- Object-Oriented Programming (OOP)
 - JDBC Connectivity
 - MySQL Database Operations
 - CRUD Operations
-- Object-Oriented Programming
+- Java Servlets
+- Apache Tomcat Deployment
+- Maven Project Management
 - Frontend Development
 - Git & GitHub Version Control
+
+---
+
+## Future Enhancements
+
+- Spring Boot Migration
+- REST API Development
+- Role-Based Access Control
+- JWT Authentication
+- Department Management
+- Cloud Deployment (AWS)
 
 ---
 
@@ -193,3 +269,10 @@ This project demonstrates:
 Computer Science Student | Java Developer | Full Stack Development Enthusiast
 
 GitHub: https://github.com/23691A3202
+
+Project Repository:
+https://github.com/23691A3202/EmployeeManagementSystem
+
+---
+
+⭐ If you found this project useful, consider giving it a Star on GitHub.
